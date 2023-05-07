@@ -175,12 +175,12 @@ function updateButton(sat) {
 
 var satButtons = document.getElementById('satButtons');
 for(let sat in satellites) {
-    console.log(`Adding button for ${sat}`);
+    // console.log(`Adding button for ${sat}`);
     satButtons.innerHTML += `<button type="button" class="me-2 my-2 btn btn-primary" id="${sat}">${sat}</button>`;
 }
 
 for(let sat in satellites) {
-    console.log(`Adding listener for ${sat}`);
+    // console.log(`Adding listener for ${sat}`);
     document.getElementById(sat).addEventListener('click', () => { updateButton(sat); });
 }
 
