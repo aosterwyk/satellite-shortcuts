@@ -1,5 +1,0 @@
-- Nav with links
-    - sat status
-    - pass predictions
-- QRZ lookup button
-- Set button color when active
