@@ -15,6 +15,7 @@
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"
     />
+    <script src="https://kit.fontawesome.com/67982ec3bd.js" crossorigin="anonymous"></script>    
     <!-- Google Fonts Roboto -->
     <link
     rel="stylesheet"
@@ -25,22 +26,52 @@
     </head>
     <body>
         <div class="container my-5">
-            <div class="row mb-4">
+            <div class="row my-2">
                 <h1 class="mx-auto text-center" id="UTCTime">Loading UTC time...</h1>
                 <small class="mx-auto text-center" id="UTCDate">Loading UTC date...</small>
             </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-12 mb-4">
-                    <div class="card mb-4">
+            <div class="my-4" id="qrzLookup" hidden="true">
+                QRZ Lookup
+            </div>        
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="QRZCallsign" placeholder="Enter a callsign" aria-label="QRZ Lookup" aria-describedby="QRZButton">
+                <button class="btn btn-primary" type="button" id="QRZButton">QRZ Lookup</button>
+            </div>
+            
+            <div class="row my-2">
+                <div class="card my-2">
+                    <div class="card-header" id="satName">
+                        <i class="fas fa-satellite-dish"></i> Click a button below
+                    </div>
                     <div class="card-body">
-                        <p class="card-text">
-                            test
-                        </p>
+                        <h4>Uplink</h4>
+                        <p id="satUplink" class="fw-bold"><i class="fas fa-arrow-up"></i></p>
+                        <p id="satUplinkTone"><i class="fas fa-wave-square"></i></p>
+                        <h4>Downlink</h4>
+                        <p id="satDownlink" class="fw-bold"><i class="fas fa-arrow-down"></i></p>
+                        <p id="satDownlinkTone"><i class="fas fa-wave-square"></i></p>
+                        <p id="satInfo"></p>
                     </div>
-                    </div>
+                    <!-- <div class="card-footer" id="satLinks">
+                        <span id="satInfoURL"></span>
+                    </div> -->
+                </div>
+                <span id="satButtons">
+                    <!-- <button type="button" class="btn btn-info">Button</button> -->
+                </span>
+                <div class="my-4" id="po-101-twitter" hidden="true">
+                    <a class="twitter-timeline" data-height="325" data-dnt="true" data-theme="dark" href="https://twitter.com/Diwata2PH?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
         </div>
+        <footer class="text-center pt-1 text-muted">
+            <small>
+                Satellite info from AMSat <a href="https://www.amsat.org/fm-satellite-frequency-summary/" target="_blank">Satellite Frequency Summary</a> page<br>
+                Last updated 05/07/2023<br>
+                <a href="https://mdbootstrap.com/freebies/dark-theme/" target="_blank"> Dark Theme</a> by MDBootstrap
+            </small>
+        </footer>
         <script type="text/javascript" src="js/sat-shorts.js"></script>
+        <script type="text/javascript" src="js/sat-info.js"></script>
     </body>
 </html>

@@ -24,3 +24,9 @@ setInterval(() => {
     datestamp.innerText = `${formattedDate} (UTC)`;    
 },1000);
 
+document.getElementById('QRZButton').addEventListener('click', () => {
+    const qrzCallsign = document.getElementById('QRZCallsign');
+    if(qrzCallsign.value.length > 1) {
+        window.open(`https://www.qrz.com/db/${qrzCallsign.value}`);
+    }
+});
