@@ -2,25 +2,25 @@
 const satellites = {
     "AO-91": { 
         name: "AO-91",
-        altName: "",
+        altName: "RadFxSat / Fox-1B",
         uplink: "435.250",
         uplinkTone: "67 Hz (CTCSS)",
         downlink: "145.960",
         downlinkTone: "",
-        info: ""
+        info: "Do not attempt to access if heard in eclipse"
     },
     "AO-92": {
         name: "AO-92",
-        altName: "",
+        altName: "Fox-1D",
         uplink: "435.350",
-        uplinkTone: "",
+        uplinkTone: "67 Hz (CTCSS)",
         downlink: "145.880",
         downlinkTone: "",
-        info: ""
+        info: "Do not attempt to access if heard in eclipse"
     },
     "SO-50": {
         name: "SO-50",
-        altName: "",
+        altName: "SaudiSat-1C",
         uplink: "145.850",
         uplinkTone: "67 Hz (CTCSS)",
         downlink: "436.795",
@@ -29,12 +29,12 @@ const satellites = {
     },
     "PO-101": {
         name: "PO-101",
-        altName: "",
+        altName: "Diwata-2",
         uplink: "437.500",
         uplinkTone: "141.3 Hz (CTCSS)",
         downlink: "145.900",
         downlinkTone: "",
-        info: "See tweets below for schedule"
+        info: `See <a href="https://twitter.com/Diwata2PH" target="_blank">tweets</a> below for schedule`
     },
     "CAS-3H": {
         name: "CAS-3H",
@@ -72,7 +72,7 @@ const satellites = {
         downlink: "437.800",
         downlinkTone: "",
         amsatPage: "",
-        info: ""
+        info: `<a href="https://www.ariss.org/current-status-of-iss-stations.html" target="_blank">Status page</a>`
     },
     "UVSQ-SAT": {
         name: "UVSQ-SAT",
