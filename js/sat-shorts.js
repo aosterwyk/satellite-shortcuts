@@ -30,3 +30,13 @@ document.getElementById('QRZButton').addEventListener('click', () => {
         window.open(`https://www.qrz.com/db/${qrzCallsign.value}`);
     }
 });
+
+document.getElementById('gridsquareLink').addEventListener('click', () => {
+    // grid square page - https://www.qrz.com/gridmapper?lat=1&lon=2
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition((position) => {
+            // console.log(position);
+            window.open(`https://www.qrz.com/gridmapper?lat=${position.coords.latitude}&lon=${position.coords.longitude}`);
+        });
+    }
+});
